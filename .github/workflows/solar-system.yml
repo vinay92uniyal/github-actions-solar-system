@@ -45,10 +45,11 @@ jobs:
           - uses: actions/setup-node@v4
             with:
              node-version: 18
-             run: npm install
-
+            
+          - run: npm install
+          
+          - run: npm run coverage
             continue-on-error: true
-            run: npm run coverage
             
           - uses: actions/upload-artifact@v4
             with:
